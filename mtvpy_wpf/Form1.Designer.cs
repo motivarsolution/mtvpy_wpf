@@ -37,9 +37,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(238, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 73);
+            this.label1.Size = new System.Drawing.Size(383, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MOTIVAR";
+            this.label1.Text = "MOTIVAR ))";
             // 
             // Form1
             // 
