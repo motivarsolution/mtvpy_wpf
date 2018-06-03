@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtvpy_wpf", "mtvpy_wpf\mtvpy_wpf.csproj", "{3E342203-2B56-4EF8-8F9C-0703AC677261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvt_t", "mvt_t\mvt_t.csproj", "{C359CAF7-6B08-4A0F-B548-046177278DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtv_w", "mtv_w\mtv_w.csproj", "{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3E342203-2B56-4EF8-8F9C-0703AC677261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E342203-2B56-4EF8-8F9C-0703AC677261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E342203-2B56-4EF8-8F9C-0703AC677261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C359CAF7-6B08-4A0F-B548-046177278DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C359CAF7-6B08-4A0F-B548-046177278DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C359CAF7-6B08-4A0F-B548-046177278DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C359CAF7-6B08-4A0F-B548-046177278DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
