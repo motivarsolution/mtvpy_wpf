@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvt_t", "mvt_t\mvt_t.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtv_w", "mtv_w\mtv_w.csproj", "{18B54D1C-0BC4-4B06-95C4-FAFF8D4855BA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{53D41280-D23C-4955-A980-CBEC88510839}"
+	ProjectSection(SolutionItems) = preProject
+		Database\SystemDB.db = Database\SystemDB.db
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
