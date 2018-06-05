@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mtvpy_wpf.Properties
+namespace mtvpt_wpf.Properties
 {
 
 

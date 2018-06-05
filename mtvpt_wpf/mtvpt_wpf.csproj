@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E266AE4B-D247-4518-A2BF-78AD82256AE5}</ProjectGuid>
+    <ProjectGuid>{3781F60B-066C-4274-B202-40C214C5E711}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>mtv_w</RootNamespace>
-    <AssemblyName>mtv_w</AssemblyName>
+    <RootNamespace>mtvpt_wpf</RootNamespace>
+    <AssemblyName>mtvpt_wpf</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

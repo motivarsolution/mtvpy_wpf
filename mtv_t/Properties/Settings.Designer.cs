@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mvt_t.Properties
+namespace mtv_t.Properties
 {
 
 
