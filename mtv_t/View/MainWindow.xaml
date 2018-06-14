@@ -5,25 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mtv_t"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Name="Button1"
-                Content="Show" 
-                HorizontalAlignment="Left" 
-                Margin="602,68,0,0" 
-                VerticalAlignment="Top" 
-                Width="74" 
-                RenderTransformOrigin="0.554,4.95" Click="Button1_Click"/>
-        <Calendar Name="Calendar1"
-                  HorizontalAlignment="Left" 
-                  Margin="34,15,0,0" 
-                  VerticalAlignment="Top"/>
-        <TextBox Name="Text1"
-                 HorizontalAlignment="Left" 
-                 Height="24" 
-                 Margin="238,22,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="438"/>
+        Title="Login" 
+        Background="LightGray"
+        Height="450" 
+        Width="800">
+    <!--<Grid Visibility="Hidden">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center">
+                    <StackPanel Height="20" 
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="Username"/>
+                        <TextBox Width="200" />
+                    </StackPanel>
+                    <StackPanel Height="20" 
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0 5 0 10">
+                        <TextBlock Text="Password"/>
+                        <TextBox Width="200" />
+                    </StackPanel>
+                    <Button Width="100" Height="20" Content="Submit"/>
+                </StackPanel>
+                
+            </Grid>
+        </Grid>
+    </Grid>-->
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"
+              Background="Aqua">
+        </Grid>
     </Grid>
 </Window>

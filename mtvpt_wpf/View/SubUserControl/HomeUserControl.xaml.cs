@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace mtvpt_wpf
+namespace mtvpt_wpf.View.SubUserControl
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomeUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomeUserControl : UserControl
     {
-        public MainWindow()
+        public HomeUserControl()
         {
             InitializeComponent();
         }

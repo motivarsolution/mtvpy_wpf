@@ -1,6 +1,4 @@
-﻿using mtv_t.Controller;
-using mtv_t.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,15 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace mtv_t
+namespace mtvpt_wpf.View.SubUserControl
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginUserControl : UserControl
     {
-
-        public MainWindow()
+        public LoginUserControl()
         {
             InitializeComponent();
         }
