@@ -61,5 +61,10 @@ namespace mtv_w.View
         {
             this.MassText.Text = this.SupplierNameText.Text;
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

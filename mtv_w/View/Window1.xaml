@@ -40,7 +40,7 @@
                 <!-- Status -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
                     <TextBlock Text="Status" />
-                    <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2" TextChanged="TextBox_TextChanged" />
                 </StackPanel>
 
                 <!-- Revision -->
