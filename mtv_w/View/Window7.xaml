@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mtv_w.View"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Window7" Height="450" Width="800">
     
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
-        <Image Source="C:/Users/SONY-VAIO/source/repos/project/mtvpy_wpf/mtv_w/Assets" Margin="310,0,0,0" Stretch="UniformToFill"/>
+        <Image Source="../Image/w.JPG" Margin="310,0,0,0" Stretch="UniformToFill"/>
         <Rectangle Margin="310,0,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -27,28 +29,29 @@
             </StackPanel>
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="isso levará menos de 1 minto."/></TextBlock>
             <StackPanel Margin="0,15" Orientation="Horizontal">
-                <!--<materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
-                <TextBox materialDesign:HintAssist.Hint="Username" Width="250" Margin="5"/>-->
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox materialDesign:HintAssist.Hint="Username" Width="250" Margin="5"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <!--<materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Senha" Width="250" Margin="5"/>-->
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Senha" Width="250" Margin="5"/>
+                
             </StackPanel>
             <Grid>
-                <CheckBox Content="Lembre-se de mim" Margin="5,10" Foreground="#707070"/>
+                <CheckBox Content="Lembre-se de mim" Margin="5,10" Foreground="#707070" Checked="CheckBox_Checked"/>
                 <Label Content="Esqueci minha senha" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Foreground="#707070"/>
             </Grid>
             <Button HorizontalAlignment="Center" Content="LOGIN" FontFamily="Impact" FontSize="18" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6"/>
             <StackPanel Orientation="Horizontal" Margin="10,35">
                 <Label Content="Ou acesse com" Foreground="#707070" VerticalAlignment="Center"/>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FF3D56AC" BorderBrush="#FF3D56AC">
-                    <!--<materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" Foreground="White"/>-->
+                    <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" Foreground="White"/>
                 </Button>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Margin="15,0" Background="#FF01BAFF" BorderBrush="#FF01BAFF">
-                    <!--<materialDesign:PackIcon Kind="Twitter" VerticalAlignment="Center" Foreground="White"/>-->
+                    <materialDesign:PackIcon Kind="Twitter" VerticalAlignment="Center" Foreground="White"/>
                 </Button>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FFE05959" BorderBrush="#FFE05959">
-                    <!--<materialDesign:PackIcon Kind="GooglePlus" VerticalAlignment="Center" Foreground="White"/>-->
+                    <materialDesign:PackIcon Kind="GooglePlus" VerticalAlignment="Center" Foreground="White"/>
                 </Button>
             </StackPanel>
         </StackPanel>
