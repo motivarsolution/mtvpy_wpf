@@ -27,5 +27,15 @@ namespace mtv_t
         {
             InitializeComponent();
         }
+
+        private void lb1_Selected(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("List Box 1");
+        }
+
+        private void lb2_Selected(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("List Box 2");
+        }
     }
 }

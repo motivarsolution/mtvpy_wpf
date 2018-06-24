@@ -51,6 +51,65 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0"
               Background="Aqua">
+            <ListView>
+                <ListViewItem Name="lb1" Selected="lb1_Selected">
+                    <TextBlock Text="Menu 1"/>
+                </ListViewItem>
+                <ListViewItem Name="lb2" Selected="lb2_Selected">
+                    <Button Content="Button Menu 1"/>
+                </ListViewItem>
+                <ListViewItem>
+                    <Button Content="Button Menu 2"/>
+                </ListViewItem>
+                <ListViewItem>
+                    <TextBox Width="100" />
+                </ListViewItem>
+
+            </ListView>
         </Grid>
+        <Grid Grid.Column="1">
+            <TabControl>
+                <TabItem Header="Tab1">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center">
+                        <TextBlock Text="Combo"/>
+                        <ComboBox Text="Text Combo Box"
+                              Width="100"
+                              Height="20">
+                            <ComboBoxItem>
+                                <TextBlock Text="TEST1"/>
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                <TextBlock Text="TEST2"/>
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                <TextBlock Text="TEST3"/>
+                            </ComboBoxItem>
+
+                        </ComboBox>
+                        <Slider Width="200" 
+                                Minimum="0" 
+                                Maximum="100"
+                                Value="80"/>
+                    </StackPanel>
+                    
+
+                </TabItem>
+                <TabItem Header="Tab2">
+                    <Menu Width="500" 
+                          Height="20" 
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left">
+                        <MenuItem Header="Menu1">
+                        </MenuItem>
+                        <MenuItem Header="Menu1">
+                        </MenuItem>
+                    </Menu>
+
+                </TabItem>
+            </TabControl>
+
+        </Grid>
+
     </Grid>
 </Window>
