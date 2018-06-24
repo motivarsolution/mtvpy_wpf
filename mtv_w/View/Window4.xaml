@@ -21,11 +21,11 @@
                 <TextBlock Text="LOGIN" Margin="20 100 20 0" TextAlignment="center" FontWeight="Bold" FontSize="24" Padding="5"/>
 
                 <!-- username -->
-                <TextBox Text="Username"  TextAlignment="Left"  Margin="90 20 90 0" IsReadOnly="True" Background="#eee" Padding="3" TextChanged="TextBox_TextChanged" Height="25"   />
+                <TextBox Text="Username"  TextAlignment="Left"  Margin="90 20 90 0" IsReadOnly="True" Background="#eee" Padding="3" Height="25"   />
                 
 
                 <!--password-->
-                <TextBox Text="Password"  TextAlignment="Left"  Margin="90 20 90 0" IsReadOnly="True" Background="#eee" Padding="3" TextChanged="TextBox_TextChanged" Height="25" />
+                <TextBox Text="Password"  TextAlignment="Left"  Margin="90 20 90 0" IsReadOnly="True" Background="#eee" Padding="3" Height="25" />
 
                 <!--forget my password-->
                 <Grid>
@@ -34,12 +34,12 @@
                         <ColumnDefinition Width="7*"/>
                         <ColumnDefinition Width="26*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="ForgetButton" Click="ForgetButton_Click" Grid.Column="0" Content=" Forget my password" Padding="2"  Margin="90 20 0 0" />
-                    <Button x:Name="SignupButton" Click="SignupButton_Click" Grid.Column="1" Content=" Sign up"  Margin="20 20 90 0" Grid.ColumnSpan="2" />
+                    <Button x:Name="ForgetButton" Grid.Column="0" Content=" Forget my password" Padding="2"  Margin="90 20 0 0" />
+                    <Button x:Name="SignupButton" Grid.Column="1" Content=" Sign up"  Margin="20 20 90 0" Grid.ColumnSpan="2" />
                 </Grid>
 
                 <!--Log in-->
-                <Button x:Name="LoginButton" Click="LoginButton_Click" Content="Sign in" Margin="150 25 150 0" Background="WhiteSmoke"/>
+                <Button x:Name="LoginButton" Content="Sign in" Margin="150 25 150 0" Background="WhiteSmoke"/>
                 
                 
 

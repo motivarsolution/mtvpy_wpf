@@ -68,9 +68,6 @@
     <Compile Include="View\Window4.xaml.cs">
       <DependentUpon>Window4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\login.xaml.cs">
-      <DependentUpon>login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Window7.xaml.cs">
       <DependentUpon>Window7.xaml</DependentUpon>
     </Compile>
@@ -91,10 +88,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Window4.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,7 +126,6 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Model\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\w.JPG" />
