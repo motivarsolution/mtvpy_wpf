@@ -96,7 +96,6 @@
                     VerticalAlignment="Center" 
                     Foreground="#707070"/>
                 <Button Command="{Binding MinimizeCommand}" 
-                        Style="{StaticResource WindowControlButton}" 
                         Content="Create an account" 
                         Background="DarkSlateGray"
                         Foreground="White"
