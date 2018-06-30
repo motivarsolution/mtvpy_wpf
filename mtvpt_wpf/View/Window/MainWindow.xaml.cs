@@ -22,6 +22,14 @@ namespace mtvpt_wpf.View
     {
         LoginUserControl _loginUserControl = new LoginUserControl();
         HomeUserControl _homeUserControl = new HomeUserControl();
+        CustomerUserControl _customerUserControl = new CustomerUserControl();
+        EmployeeUserControl _employeeUserControl = new EmployeeUserControl();
+        HistoryUserControl _historyUserControl = new HistoryUserControl();
+        ReportUserControl _reportUserControl = new ReportUserControl();
+        SalesUserControl _salesUserControl = new SalesUserControl();
+        SearchUserControl _searchUserControl = new SearchUserControl();
+        SettingUserControl _settingUserControl = new SettingUserControl();
+        UserManagementUserControl _userManagementUserControl = new UserManagementUserControl();
 
         public MainWindow()
         {
@@ -49,6 +57,39 @@ namespace mtvpt_wpf.View
             SetUserControlMenu(_homeUserControl);
         }
 
+        private void ListViewItemCustomer_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_customerUserControl);
+        }
 
+        private void ListViewItemEmployee_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_employeeUserControl);
+        }
+
+        private void ListViewItemReport_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_reportUserControl);
+        }
+
+        private void ListViewItemSales_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_salesUserControl);
+        }
+
+        private void ListViewItemSearch_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_searchUserControl);
+        }
+
+        private void ListViewItemSetting_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_settingUserControl);
+        }
+
+        private void ListViewItemUserManagement_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_userManagementUserControl);
+        }
     }
 }

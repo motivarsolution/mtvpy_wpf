@@ -22,7 +22,29 @@
                               Content="Login" 
                               Selected="ListViewItemLogin_Selected"/>
                 <ListViewItem Name="ListViewItemHome" 
-                              Content="Home" Selected="ListViewItemHome_Selected"/>
+                              Content="Home" 
+                              Selected="ListViewItemHome_Selected"/>
+                <ListViewItem Name="ListViewItemCustomer" 
+                              Content="Customer" 
+                              Selected="ListViewItemCustomer_Selected"/>
+                <ListViewItem Name="ListViewItemEmployee" 
+                              Content="Employee" 
+                              Selected="ListViewItemEmployee_Selected"/>
+                <ListViewItem Name="ListViewItemReport" 
+                              Content="Report" 
+                              Selected="ListViewItemReport_Selected"/>
+                <ListViewItem Name="ListViewItemSales" 
+                              Content="Sales" 
+                              Selected="ListViewItemSales_Selected"/>
+                <ListViewItem Name="ListViewItemSearch" 
+                              Content="Search" 
+                              Selected="ListViewItemSearch_Selected"/>
+                <ListViewItem Name="ListViewItemSetting" 
+                              Content="Setting" 
+                              Selected="ListViewItemSetting_Selected"/>
+                <ListViewItem Name="ListViewItemUserManagement" 
+                              Content="UserManagement" 
+                              Selected="ListViewItemUserManagement_Selected"/>
             </ListView>
             
         </Grid>
