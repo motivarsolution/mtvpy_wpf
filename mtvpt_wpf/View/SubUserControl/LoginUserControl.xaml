@@ -97,11 +97,11 @@
                 <TextBlock Text="Motivar" 
                            Foreground="White" 
                            HorizontalAlignment="Center" 
-                           VerticalAlignment="Center"
+                           VerticalAlignment="Bottom"
                            FontSize="48" 
                            FontFamily="Champagne &amp; Limousines" 
                            FontWeight="Bold"
-                           Grid.Row="0"/>
+                           Grid.Row="0" Margin="151,0,151,46"/>
 
                 <StackPanel  Orientation="Horizontal" 
                              VerticalAlignment="Top"
@@ -118,7 +118,7 @@
                                 FontStyle="Normal"
                                 FontSize="16" 
                                 Width="176" 
-                                Height="32" />
+                                Height="32" Click="Button_Click" />
                 </StackPanel>
             </Grid>
 

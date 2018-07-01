@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace mtvpt_wpf.View.SubUserControl
+namespace mtv_w.View
 {
     /// <summary>
-    /// Interaction logic for LoginUserControl.xaml
+    /// Interaction logic for Window5.xaml
     /// </summary>
-    public partial class LoginUserControl : UserControl
+    public partial class Window5 : Window
     {
-        public LoginUserControl()
+        public Window5()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
