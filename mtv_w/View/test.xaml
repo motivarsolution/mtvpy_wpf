@@ -29,8 +29,6 @@
                         BorderBrush="Aqua"
                         BorderThickness="1"
                         Width="100" Height="20"
-                       
-                        Click="Onclick3" 
                         ClickMode="Release"
                         Grid.Row="1"/>
            
