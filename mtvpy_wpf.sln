@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtv_w", "mtv_w\mtv_w.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtv_t", "mtv_t\mtv_t.csproj", "{A6DE00A4-F79C-47D3-AEF9-64DB5F39A4B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES", "AES\AES.csproj", "{DC672964-666B-4523-B9F3-5C3F4625C07C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{A6DE00A4-F79C-47D3-AEF9-64DB5F39A4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6DE00A4-F79C-47D3-AEF9-64DB5F39A4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6DE00A4-F79C-47D3-AEF9-64DB5F39A4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC672964-666B-4523-B9F3-5C3F4625C07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC672964-666B-4523-B9F3-5C3F4625C07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC672964-666B-4523-B9F3-5C3F4625C07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC672964-666B-4523-B9F3-5C3F4625C07C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
