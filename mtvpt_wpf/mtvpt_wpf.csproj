@@ -60,6 +60,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\zAccount_Detail_Model.cs" />
+    <Compile Include="Model\zSystem_Detail_Model.cs" />
     <Compile Include="Utility\GlobalFunctions.cs" />
     <Compile Include="Utility\GlobalVariables.cs" />
     <Compile Include="App.xaml.cs">
@@ -175,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\w.JPG" />
