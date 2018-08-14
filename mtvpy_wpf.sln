@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{53D41280-D23C-4955-A980-CBEC88510839}"
-	ProjectSection(SolutionItems) = preProject
-		Database\SystemDB.db = Database\SystemDB.db
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtvpt_wpf", "mtvpt_wpf\mtvpt_wpf.csproj", "{3781F60B-066C-4274-B202-40C214C5E711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mtv_w", "mtv_w\mtv_w.csproj", "{E266AE4B-D247-4518-A2BF-78AD82256AE5}"

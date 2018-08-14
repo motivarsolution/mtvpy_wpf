@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mtvpt_wpf.Model
 {
-    public class tsLogin_Detail_Model
+    public class tsLoginDetailModel
     {
         public string login_id { get; set; }
 

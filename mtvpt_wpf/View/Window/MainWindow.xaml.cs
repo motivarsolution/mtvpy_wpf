@@ -1,4 +1,5 @@
-﻿using mtvpt_wpf.View.SubUserControl;
+﻿using mtvpt_wpf.Controller;
+using mtvpt_wpf.View.SubUserControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,10 @@ namespace mtvpt_wpf.View
         public MainWindow()
         {
             InitializeComponent();
+
+            DatabaseConnection.SetConnection();
+            DatabaseConnection.querySystemDetail();
+            DatabaseConnection.queryLogin();
         }
 
         private void SetUserControlMenu(UserControl _UserControlSelected)

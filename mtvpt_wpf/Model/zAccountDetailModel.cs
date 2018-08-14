@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mtvpt_wpf.Model
 {
-    class zAccount_Detail_Model
+    public class zAccountDetailModel
     {
         public string account_id { get; set; }
 
