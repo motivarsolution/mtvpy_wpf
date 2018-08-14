@@ -38,7 +38,7 @@ namespace mtvpt_wpf.View
 
             DatabaseConnection.SetConnection();
             DatabaseConnection.querySystemDetail();
-            DatabaseConnection.queryLogin();
+            
         }
 
         private void SetUserControlMenu(UserControl _UserControlSelected)

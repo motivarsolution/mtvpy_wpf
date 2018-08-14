@@ -1,4 +1,5 @@
 ﻿using mtvpt_wpf.Model;
+using mtvpt_wpf.Model.Internal;
 using mtvpt_wpf.Utility;
 using System;
 using System.Collections.Generic;
@@ -23,15 +24,16 @@ namespace mtvpt_wpf.Controller
             string ProjectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string FullDatabasePath = Path.Combine(ProjectPath, DatabasePath);
 
-            sqlConnection = new SQLiteConnection("Data Source=" + FullDatabasePath + ";Version=3;");
-            //if (Environment.MachineName == "DESKTOP-P3P3RQJ")
-            //{
-            //    sql_con = new SQLiteConnection(@"Data Source=E:\OneDrive\MOTIVAR\Database_Prototype.db;Version=3;");
-            //}
-            //else
-            //{
-            //    sql_con = new SQLiteConnection(@"Data Source=C:\Users\motivar\OneDrive\MOTIVAR\Database_Prototype.db;Version=3;");
-            //}
+            if (!File.Exists(FullDatabasePath))
+            {
+                GlobalFunctions.ShowDebug("Create Database");
+                //Create Database
+                sqlConnection = new SQLiteConnection("Data Source=" + FullDatabasePath + ";Version=3;");
+            }
+            else
+            {
+                sqlConnection = new SQLiteConnection("Data Source=" + FullDatabasePath + ";Version=3;");
+            }
 
         }
 
@@ -111,15 +113,16 @@ namespace mtvpt_wpf.Controller
 
         #endregion
 
-        public static void queryLogin(string user = "test01" , string pass = "test00")
+        #region QueryLogin
+        public static zAccountDetailModel queryLogin(LoginModel loginModel)
         {
             zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
 
             string CommandText = "SELECT * " +
                                  "FROM zAccount_Detail " +
                                  "WHERE " + 
-                                 "account_username = '" + user + "' " +
-                                 "AND account_password ='" + pass + "'";
+                                 "account_username = '" + loginModel.login_username + "' " +
+                                 "AND account_password ='" + loginModel.Login_password + "'";
 
             sqlConnection.Open();
             sqlCommand = sqlConnection.CreateCommand();
@@ -153,10 +156,46 @@ namespace mtvpt_wpf.Controller
                     }
                     
                 }
+
+
+            }
+
+            sqlConnection.Close();
+
+            return zAccountDetailModel;
+        }
+
+        public static void queryLoginUsername(string user = "test01")
+        {
+            zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
+
+            string CommandText = "SELECT * " +
+                                 "FROM zAccount_Detail " +
+                                 "WHERE " +
+                                 "account_username = '" + user + "'";
+
+            sqlConnection.Open();
+            sqlCommand = sqlConnection.CreateCommand();
+
+            using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
+            {
+                using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                {
+                    if (rdr.HasRows != false)
+                    {
+                        
+                    }
+                    else
+                    {
+                        GlobalFunctions.ShowDebug("Incorrect");
+                    }
+
+                }
             }
 
             sqlConnection.Close();
         }
+
 
         public static void UpdateLoginTransaction(string user = "test01", string pass = "test00")
         {
@@ -204,5 +243,8 @@ namespace mtvpt_wpf.Controller
 
             sqlConnection.Close();
         }
+
+        #endregion
+
     }
 }
