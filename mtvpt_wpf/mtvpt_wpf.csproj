@@ -79,7 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Constants\Contents.cs" />
-    <Compile Include="Constants\ErrorMessages.cs" />
+    <Compile Include="Constants\Messages.cs" />
     <Compile Include="Controller\DatabaseConnection.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Model\Internal\LoginMessage.cs" />

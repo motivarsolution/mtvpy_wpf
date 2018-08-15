@@ -8,8 +8,21 @@ namespace mtvpt_wpf.Model.Internal
 {
     public class LoginMessage
     {
-        public LoginModel LoginModel { get; set; }
+        private zAccountDetailModel _zAccountDetailModel;
 
-        public ReturnStatusModel MyProperty { get; set; }
+        public zAccountDetailModel zAccountDetailModel
+        {
+            get { return _zAccountDetailModel; }
+            set { _zAccountDetailModel = value; }
+        }
+
+        private ReturnStatusModel _returnStatusModel;
+
+        public ReturnStatusModel returnStatusModel
+        {
+            get { return _returnStatusModel; }
+            set { _returnStatusModel = value; }
+        }
+       
     }
 }

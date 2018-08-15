@@ -10,9 +10,9 @@ namespace mtvpt_wpf.Model
     {
         public string login_id { get; set; }
 
-        public string login_username { get; set; }
+        public string login_account_id { get; set; }
 
-        public string login_password { get; set; }
+        public string login_username { get; set; }
 
         public string login_date { get; set; }
 
@@ -21,5 +21,7 @@ namespace mtvpt_wpf.Model
         public string login_ip { get; set; }
 
         public string login_token { get; set; }
+
+        public string login_status { get; set; }
     }
 }

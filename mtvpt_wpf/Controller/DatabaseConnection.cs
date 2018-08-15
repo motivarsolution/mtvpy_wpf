@@ -1,4 +1,5 @@
-﻿using mtvpt_wpf.Model;
+﻿using mtvpt_wpf.Constants;
+using mtvpt_wpf.Model;
 using mtvpt_wpf.Model.Internal;
 using mtvpt_wpf.Utility;
 using System;
@@ -89,10 +90,12 @@ namespace mtvpt_wpf.Controller
             sqlConnection.Close();
         }
 
-        public static void querytsNumberRange()
+        public static tsNumberRangeModel querytsNumberRange()
         {
+            tsNumberRangeModel tsNumberRangeModel = new tsNumberRangeModel();
+
             string CommandText = "SELECT * " +
-                                 "FROM zSystem_Detail ";
+                                 "FROM tsNumber_Range_Model";
 
             sqlConnection.Open();
             sqlCommand = sqlConnection.CreateCommand();
@@ -103,20 +106,55 @@ namespace mtvpt_wpf.Controller
                 {
                     while (rdr.Read())
                     {
-
+                        tsNumberRangeModel.login_id = (rdr["login_id"].ToString());
                     }
                 }
             }
 
             sqlConnection.Close();
+
+            return tsNumberRangeModel;
+
+
         }
 
+        public static ReturnStatusModel updatetsNumberRange(tsNumberRangeModel tsNumberRangeModel)
+        {
+            ReturnStatusModel returnStatusModel = new ReturnStatusModel();
+
+            string CommandText = "SELECT * " +
+                                 "FROM tsNumber_Range_Model";
+
+            sqlConnection.Open();
+            sqlCommand = sqlConnection.CreateCommand();
+
+            using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
+            {
+                using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        tsNumberRangeModel.login_id = (rdr["login_id"].ToString());
+                    }
+                }
+            }
+
+            returnStatusModel.status = true;
+            returnStatusModel.error_message = Messages.m_update_success;
+
+            sqlConnection.Close();
+
+            return returnStatusModel;
+
         #endregion
+        }
 
         #region QueryLogin
-        public static zAccountDetailModel queryLogin(LoginModel loginModel)
+        public static LoginMessage queryLogin(LoginModel loginModel)
         {
+            LoginMessage loginMessage = new LoginMessage();
             zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
+            ReturnStatusModel returnStatusModel = new ReturnStatusModel();
 
             string CommandText = "SELECT * " +
                                  "FROM zAccount_Detail " +
@@ -149,10 +187,14 @@ namespace mtvpt_wpf.Controller
                             zAccountDetailModel.account_expire_date = (rdr["account_expire_date"].ToString());
                             zAccountDetailModel.account_status = (rdr["account_status"].ToString());
                         }
+
+                        returnStatusModel.status = true;
+                        returnStatusModel.error_message = Messages.m_login_success;
                     }
                     else
                     {
-                        GlobalFunctions.ShowDebug("Incorrect");
+                        returnStatusModel.status = false;
+                        returnStatusModel.error_message = Messages.m_user_or_pass_inc;
                     }
                     
                 }
@@ -160,16 +202,21 @@ namespace mtvpt_wpf.Controller
 
             }
 
+            loginMessage.zAccountDetailModel = zAccountDetailModel;
+            loginMessage.returnStatusModel = returnStatusModel;
+
             sqlConnection.Close();
 
-            return zAccountDetailModel;
+            return loginMessage;
         }
 
-        public static zAccountDetailModel queryLoginUsername(LoginModel loginModel)
+        public static LoginMessage queryLoginUsername(LoginModel loginModel)
         {
+            LoginMessage loginMessage = new LoginMessage();
             zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
+            ReturnStatusModel returnStatusModel = new ReturnStatusModel();
 
-            string CommandText = "SELECT * " +
+            string CommandText = "SELECT account_username " +
                                  "FROM zAccount_Detail " +
                                  "WHERE " +
                                  "account_username = '" + loginModel.login_username + "'";
@@ -181,67 +228,73 @@ namespace mtvpt_wpf.Controller
             {
                 using (SQLiteDataReader rdr = cmd.ExecuteReader())
                 {
-                    if (rdr.HasRows != false)
+                    if (rdr.HasRows != false && rdr.Read())
                     {
-                        
+                        zAccountDetailModel.account_username = (rdr["account_username"].ToString());
+                        returnStatusModel.status = false;
+                        returnStatusModel.error_message = Messages.m_pass_inc;
                     }
                     else
                     {
-                        GlobalFunctions.ShowDebug("Incorrect");
+                        returnStatusModel.status = false;
+                        returnStatusModel.error_message = Messages.m_user_not_exist;
                     }
 
                 }
             }
 
+            loginMessage.zAccountDetailModel = zAccountDetailModel;
+            loginMessage.returnStatusModel = returnStatusModel;
+
             sqlConnection.Close();
+
+            return loginMessage;
         }
 
 
-        public static void UpdateLoginTransaction(string user = "test01", string pass = "test00")
+        public static void inserttsLoginDetail(tsLoginDetailModel tsLoginDetailModel)
         {
-            zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
+            //zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
 
-            string CommandText = "SELECT * " +
-                                 "FROM zAccount_Detail " +
-                                 "WHERE " +
-                                 "account_username = '" + user + "' " +
-                                 "AND account_password ='" + pass + "'";
+            //string CommandText = "SELECT * " +
+            //                     "FROM zAccount_Detail " +
+            //                     "WHERE ";
 
-            sqlConnection.Open();
-            sqlCommand = sqlConnection.CreateCommand();
+            //sqlConnection.Open();
+            //sqlCommand = sqlConnection.CreateCommand();
 
-            using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
-            {
-                using (SQLiteDataReader rdr = cmd.ExecuteReader())
-                {
-                    if (rdr.HasRows != false)
-                    {
-                        while (rdr.Read())
-                        {
-                            zAccountDetailModel.account_id = (rdr["account_id"].ToString());
-                            zAccountDetailModel.account_username = (rdr["account_username"].ToString());
-                            zAccountDetailModel.account_password = (rdr["account_password"].ToString());
-                            zAccountDetailModel.account_created_date = (rdr["account_created_date"].ToString());
-                            zAccountDetailModel.account_created_by = (rdr["account_created_by"].ToString());
-                            zAccountDetailModel.account_firstname = (rdr["account_firstname"].ToString());
-                            zAccountDetailModel.account_lastname = (rdr["account_lastname"].ToString());
-                            zAccountDetailModel.account_lastlogin_time = (rdr["account_lastlogin_time"].ToString());
-                            zAccountDetailModel.account_lastlogin_date = (rdr["account_lastlogin_date"].ToString());
-                            zAccountDetailModel.account_language_default = (rdr["account_language_default"].ToString());
-                            zAccountDetailModel.account_role_id = (rdr["account_role_id"].ToString());
-                            zAccountDetailModel.account_expire_date = (rdr["account_expire_date"].ToString());
-                            zAccountDetailModel.account_status = (rdr["account_status"].ToString());
-                        }
-                    }
-                    else
-                    {
-                        GlobalFunctions.ShowDebug("Incorrect");
-                    }
+            //using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
+            //{
+            //    using (SQLiteDataReader rdr = cmd.ExecuteReader())
+            //    {
+            //        if (rdr.HasRows != false)
+            //        {
+            //            while (rdr.Read())
+            //            {
+            //                zAccountDetailModel.account_id = (rdr["account_id"].ToString());
+            //                zAccountDetailModel.account_username = (rdr["account_username"].ToString());
+            //                zAccountDetailModel.account_password = (rdr["account_password"].ToString());
+            //                zAccountDetailModel.account_created_date = (rdr["account_created_date"].ToString());
+            //                zAccountDetailModel.account_created_by = (rdr["account_created_by"].ToString());
+            //                zAccountDetailModel.account_firstname = (rdr["account_firstname"].ToString());
+            //                zAccountDetailModel.account_lastname = (rdr["account_lastname"].ToString());
+            //                zAccountDetailModel.account_lastlogin_time = (rdr["account_lastlogin_time"].ToString());
+            //                zAccountDetailModel.account_lastlogin_date = (rdr["account_lastlogin_date"].ToString());
+            //                zAccountDetailModel.account_language_default = (rdr["account_language_default"].ToString());
+            //                zAccountDetailModel.account_role_id = (rdr["account_role_id"].ToString());
+            //                zAccountDetailModel.account_expire_date = (rdr["account_expire_date"].ToString());
+            //                zAccountDetailModel.account_status = (rdr["account_status"].ToString());
+            //            }
+            //        }
+            //        else
+            //        {
+            //            GlobalFunctions.ShowDebug("Incorrect");
+            //        }
 
-                }
-            }
+            //    }
+            //}
 
-            sqlConnection.Close();
+            //sqlConnection.Close();
         }
 
         #endregion

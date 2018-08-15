@@ -1,4 +1,6 @@
 ﻿using mtvpt_wpf.Controller;
+using mtvpt_wpf.Model.Internal;
+using mtvpt_wpf.Utility;
 using mtvpt_wpf.View.SubUserControl;
 using System;
 using System.Collections.Generic;
@@ -32,13 +34,21 @@ namespace mtvpt_wpf.View
         SettingUserControl _settingUserControl = new SettingUserControl();
         UserManagementUserControl _userManagementUserControl = new UserManagementUserControl();
 
+        LoginMessage loginMessage = new LoginMessage();
+        LoginModel loginModel = new LoginModel();
+
         public MainWindow()
         {
             InitializeComponent();
 
             DatabaseConnection.SetConnection();
             DatabaseConnection.querySystemDetail();
-            
+
+            loginModel.login_username = "test01";
+            loginModel.Login_password = "test01";
+
+            loginMessage = LoginController.Login(loginModel);
+            GlobalFunctions.ShowDebug(loginMessage.returnStatusModel.error_message);
         }
 
         private void SetUserControlMenu(UserControl _UserControlSelected)

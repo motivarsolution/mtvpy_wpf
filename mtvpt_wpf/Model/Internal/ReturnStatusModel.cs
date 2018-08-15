@@ -8,7 +8,7 @@ namespace mtvpt_wpf.Model
 {
     public class ReturnStatusModel
     {
-        public string status { get; set; }
+        public bool status { get; set; }
 
         public string error_message { get; set; }
     }
