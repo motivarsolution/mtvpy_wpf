@@ -28,7 +28,7 @@ namespace mtvpt_wpf.Controller
 
             if (zAccountDetailModel == null)
             {
-                //DatabaseConnection.queryLoginUsername(loginModel);
+                zAccountDetailModel = DatabaseConnection.queryLoginUsername(loginModel);
             }
 
 

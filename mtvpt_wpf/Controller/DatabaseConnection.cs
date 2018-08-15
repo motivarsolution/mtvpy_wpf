@@ -165,14 +165,14 @@ namespace mtvpt_wpf.Controller
             return zAccountDetailModel;
         }
 
-        public static void queryLoginUsername(string user = "test01")
+        public static zAccountDetailModel queryLoginUsername(LoginModel loginModel)
         {
             zAccountDetailModel zAccountDetailModel = new zAccountDetailModel();
 
             string CommandText = "SELECT * " +
                                  "FROM zAccount_Detail " +
                                  "WHERE " +
-                                 "account_username = '" + user + "'";
+                                 "account_username = '" + loginModel.login_username + "'";
 
             sqlConnection.Open();
             sqlCommand = sqlConnection.CreateCommand();

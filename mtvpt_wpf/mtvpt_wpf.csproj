@@ -82,6 +82,7 @@
     <Compile Include="Constants\ErrorMessages.cs" />
     <Compile Include="Controller\DatabaseConnection.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Model\Internal\LoginMessage.cs" />
     <Compile Include="Model\Internal\LoginModel.cs" />
     <Compile Include="Model\Internal\ReturnStatusModel.cs" />
     <Compile Include="Model\tsLoginDetailModel.cs" />
