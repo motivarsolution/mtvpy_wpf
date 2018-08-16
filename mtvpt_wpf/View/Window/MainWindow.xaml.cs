@@ -1,4 +1,5 @@
-﻿using mtvpt_wpf.Controller;
+﻿using mtvpt_wpf.Constants;
+using mtvpt_wpf.Controller;
 using mtvpt_wpf.Model.Internal;
 using mtvpt_wpf.Utility;
 using mtvpt_wpf.View.SubUserControl;
@@ -49,6 +50,9 @@ namespace mtvpt_wpf.View
 
             loginMessage = LoginController.Login(loginModel);
             GlobalFunctions.ShowDebug(loginMessage.returnStatusModel.error_message);
+
+            GlobalVariables.system_langugue = "EN";
+            GlobalFunctions.ShowDebug(Messages.Test);
         }
 
         private void SetUserControlMenu(UserControl _UserControlSelected)

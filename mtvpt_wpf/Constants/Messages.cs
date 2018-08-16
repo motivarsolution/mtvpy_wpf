@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mtvpt_wpf.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,23 @@ namespace mtvpt_wpf.Constants
         public static string m_insert_success = "Insert success!";
 
         public static string m_update_success = "Update success!";
+
+        private static string test;
+
+        public static string Test
+        {
+            get {
+                if (GlobalVariables.system_langugue == "TH")
+                {
+                    return "สวัสดี";
+                }
+                else
+                {
+                    return "Hello";
+                }
+            }
+            set { test = value; }
+        }
+
     }
 }

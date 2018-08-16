@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace mtvpt_wpf.Utility
 {
-    class GlobalVariables
+    public static class GlobalVariables
     {
+        public static string system_langugue { get; set; }
     }
 }
