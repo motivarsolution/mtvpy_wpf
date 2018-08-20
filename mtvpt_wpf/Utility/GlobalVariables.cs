@@ -8,6 +8,6 @@ namespace mtvpt_wpf.Utility
 {
     public static class GlobalVariables
     {
-        public static string system_langugue { get; set; }
+        public static string SYSTEM_LANGUEGE { get; set; }
     }
 }

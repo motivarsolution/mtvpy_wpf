@@ -26,7 +26,7 @@ namespace mtvpt_wpf.Constants
         public static string Test
         {
             get {
-                if (GlobalVariables.system_langugue == "TH")
+                if (GlobalVariables.SYSTEM_LANGUEGE == "TH")
                 {
                     return "สวัสดี";
                 }

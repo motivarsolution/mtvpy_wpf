@@ -51,8 +51,10 @@ namespace mtvpt_wpf.View
             loginMessage = LoginController.Login(loginModel);
             GlobalFunctions.ShowDebug(loginMessage.returnStatusModel.error_message);
 
-            GlobalVariables.system_langugue = "EN";
+            GlobalVariables.SYSTEM_LANGUEGE = "EN";
             GlobalFunctions.ShowDebug(Messages.Test);
+
+
         }
 
         private void SetUserControlMenu(UserControl _UserControlSelected)
