@@ -45,6 +45,9 @@
                 <ListViewItem Name="ListViewItemUserManagement" 
                               Content="UserManagement" 
                               Selected="ListViewItemUserManagement_Selected"/>
+                <ListViewItem Name="ListViewItemMaterialManagement" 
+                              Content="MaterialManagement" 
+                              Selected="ListViewItemMaterialManagement_Selected"/>
             </ListView>
             
         </Grid>

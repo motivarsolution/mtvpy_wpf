@@ -34,6 +34,7 @@ namespace mtvpt_wpf.View
         SearchUserControl _searchUserControl = new SearchUserControl();
         SettingUserControl _settingUserControl = new SettingUserControl();
         UserManagementUserControl _userManagementUserControl = new UserManagementUserControl();
+        MaterialManagementUserControl _materialManagementUserControl = new MaterialManagementUserControl();
 
         LoginMessage loginMessage = new LoginMessage();
         LoginModel loginModel = new LoginModel();
@@ -111,6 +112,11 @@ namespace mtvpt_wpf.View
         private void ListViewItemUserManagement_Selected(object sender, RoutedEventArgs e)
         {
             SetUserControlMenu(_userManagementUserControl);
+        }
+
+        private void ListViewItemMaterialManagement_Selected(object sender, RoutedEventArgs e)
+        {
+            SetUserControlMenu(_materialManagementUserControl); 
         }
     }
 }

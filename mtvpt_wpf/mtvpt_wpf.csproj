@@ -136,6 +136,9 @@
     <Compile Include="View\SubUserControl\LoginUserControl.xaml.cs">
       <DependentUpon>LoginUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SubUserControl\MaterialManagementUserControl.xaml.cs">
+      <DependentUpon>MaterialManagementUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SubUserControl\ReportUserControl.xaml.cs">
       <DependentUpon>ReportUserControl.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SubUserControl\LoginUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SubUserControl\MaterialManagementUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
