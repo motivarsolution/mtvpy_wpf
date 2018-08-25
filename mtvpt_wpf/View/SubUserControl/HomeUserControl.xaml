@@ -4,25 +4,83 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mtvpt_wpf.View.SubUserControl"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              Background="Tomato"
              d:DesignHeight="450" 
-             d:DesignWidth="800">
+             d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance local:HomeUserControl}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0"><!-- Shop Name -->
-            
+            <TextBlock Text="Shop Name"
+                       FontSize="40"
+                       HorizontalAlignment="Left"/>
+            <StackPanel HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+                <Button Content="Notification"
+                        Height="30"
+                        VerticalAlignment="Top"/>
+                <Button Content="Setting"
+                        Height="30"
+                        VerticalAlignment="Top"/>
+                <Border Width="50"
+                        Height="50"
+                        BorderThickness="2"
+                        BorderBrush="Black">
+                    <TextBlock Text="Image"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Border>
+
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="1"><!-- Search -->
 
         </Grid>
         <Grid Grid.Row="2"><!-- Chart -->
-
+            <StackPanel Orientation="Horizontal">
+                <Grid>
+                    <lvc:PieChart LegendLocation="Bottom" 
+                                  Hoverable="False" 
+                                  Width="400">
+                        <lvc:PieChart.Series>
+                            <lvc:PieSeries Title="Maria" Values="3" DataLabels="True"/>
+                            <lvc:PieSeries Title="Charles" Values="4" DataLabels="True"/>
+                            <lvc:PieSeries Title="Frida" Values="6" DataLabels="True" />
+                            <lvc:PieSeries Title="Frederic" Values="2" DataLabels="True"/>
+                        </lvc:PieChart.Series>
+                    </lvc:PieChart>
+                </Grid>
+                <Grid>
+                    <Grid Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <lvc:CartesianChart Grid.Row="1" LegendLocation="Bottom">
+                            <lvc:CartesianChart.Series>
+                                <lvc:ScatterSeries Title="Series A" Values="{Binding ValuesA}" />
+                                <lvc:ScatterSeries Title="Series B" Values="{Binding ValuesB}"
+                                   PointGeometry="{x:Static lvc:DefaultGeometries.Diamond}" />
+                                <lvc:ScatterSeries Title="Series C" Values="{Binding ValuesC}"
+                                   PointGeometry="{x:Static lvc:DefaultGeometries.Triangle}"
+                                   StrokeThickness="2" Fill="Transparent"/>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisY>
+                                <!--setting the axis unit improved the labels rounding rule-->
+                                <lvc:Axis Unit="1"></lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                    </Grid>
+                </Grid>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="3"><!-- Recently Menu-->
 

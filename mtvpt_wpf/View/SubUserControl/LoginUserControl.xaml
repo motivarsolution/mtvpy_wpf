@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mtvpt_wpf.View.SubUserControl"
-              xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" 
@@ -70,94 +70,96 @@
             </Grid>
             <Grid Grid.Column="1"
                   Background="White">
-                <StackPanel Margin="0 30 0 0"
+                
+                <!--ใช้ StackPanel หลัก 1 อัน แล้วเรียงแนวตั้งลงมาเรื่อยๆ-->
+                <StackPanel Margin="0 -50 0 0"
                             Orientation="Vertical"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Top">
+                            VerticalAlignment="Center">
 
                     <!-- ปุ่ม + Textbox ใส่ตรงนี้นะ -->
-
                     <TextBlock Text="LOGIN"
                                FontSize="28"
-                               FontWeight="Bold"/>
-                </StackPanel>
+                               FontWeight="Bold"
+                               Margin="0 0 0 40"
+                               HorizontalAlignment="Center"/>
+                    <StackPanel Margin="0 0 0 -10"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <materialDesign:PackIcon 
+                                Kind="AccountOutline" 
+                                VerticalAlignment="center" 
+                                Foreground="#707070" 
+                                Height="40" 
+                                Width="25"
+                                Margin="0 0 0 0" />
+                        <TextBox materialDesign:HintAssist.Hint="Username" 
+                                 FontSize="18"
+                                 Width="250"
+                                 Height="25"/>  
+                    </StackPanel>
 
-                <StackPanel  Margin="0 0 0 200"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Center">
-                    <materialDesign:PackIcon 
-                    Kind="AccountOutline" 
-                    VerticalAlignment="center" 
-                    Foreground="#707070" 
-                    Height="40" 
-                    Width="25"
-                    Margin="0,104,0,108" />
-                    <TextBox materialDesign:HintAssist.Hint="Username" 
-                         Width="250"
-                         Height="25" 
-                         Margin="0,95"/>
-                </StackPanel>
+                    <StackPanel Margin="0 0 0 0"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <materialDesign:PackIcon 
+                                 Kind="KeyVariant"
+                                 Height="40"
+                                 Width="25"
+                                 VerticalAlignment="Center" 
+                                 Foreground="#707070"/>
+                        <PasswordBox materialDesign:HintAssist.Hint="Password hint" 
+                                     FontSize="18"
+                                     Width="250" 
+                                     Height="25"/>
+                    </StackPanel>
 
-                <StackPanel Margin="0 0 0 100"
-                            Orientation="Horizontal"
+                    <Button HorizontalAlignment="Right" 
+                            Content="Sign in" 
+                            Width="250" 
+                            Height="25"
+                            Margin="0 10 0 0"
+                            BorderBrush="#FF307CD6"/>
+
+                    <StackPanel Margin="0 5 0 0"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right">
+                        <CheckBox Margin="0 0 0 0"
+                                  VerticalAlignment="Center" 
+                                  Foreground="#707070"/>
+                        <TextBlock Text="remember me"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 0 0" 
+                                   RenderTransformOrigin="0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                            Margin="0 10 0 0"
                             HorizontalAlignment="Center">
-                    <materialDesign:PackIcon 
-                     Kind="KeyVariant"
-                     Height="40"
-                     Width="25"
-                     VerticalAlignment="Center" 
-                     Foreground="#707070"/>
-                    <PasswordBox materialDesign:HintAssist.Hint="senha" 
-                                 Width="250" 
-                                 Height="25"
-                                 Margin="0,154,0,153"/>
-                </StackPanel>
-
-                <Button HorizontalAlignment="Center" 
-                        Content="Sign Up" 
-                        FontFamily="Impact" 
-                        FontSize="15" 
-                        Width="251" 
-                        Height="25"
-                        Margin="82,192,67,215"
-                        BorderBrush="#FF307CD6"/>
-
-                <StackPanel Margin="0 0 69 100"
-                            Orientation="Horizontal"
-                            HorizontalAlignment="Right">
-                    <materialDesign:PackIcon Kind="CropSquare"
-                                             Margin="0 167 0 0"
-                                             VerticalAlignment="Center" 
-                                             Foreground="#707070"/>
-                    <TextBlock Text="remember me"
-                               HorizontalAlignment="Left"
-                               Margin="0 240 0 60" RenderTransformOrigin="1.82,0.328"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal"
-                            Margin="0 270 0 0"
-                            HorizontalAlignment="Center">
-                    <TextBlock Text="Password  " 
+                        <TextBlock Text="Password  " 
                                FontWeight="Bold" 
-                               Margin="0 0 10 0"/>
-                    <TextBlock Text="l"/>
-                    <TextBlock Text="   Forget Password" 
+                               Margin="0 0 0 0"/>
+                        <TextBlock Text="l"/>
+                        <TextBlock Text="   Forget Password" 
                                FontWeight="Bold"/>
-                </StackPanel>
+                    </StackPanel>
 
+                    
+
+                </StackPanel>
+              
+                <!-- ปุ่มเลือกภาษา -->            
                 <StackPanel Orientation="Horizontal"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Right">
-                    
-                    <Button>
-                        <Button.Content>
-                            <Image Source="../ww.JPG" 
-                                   Width="50" 
-                                   Height="50" />
-                        </Button.Content>
-                    </Button>
-                </StackPanel>
 
+                    <ToggleButton Content="ไทย"
+                                  Width="50"/>
+                    <ToggleButton Content="English"
+                                  Width="50"/>
+
+                </StackPanel>
 
             </Grid>
         </Grid>
