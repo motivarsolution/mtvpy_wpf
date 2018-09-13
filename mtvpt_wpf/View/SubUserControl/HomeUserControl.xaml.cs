@@ -24,5 +24,10 @@ namespace mtvpt_wpf.View.SubUserControl
         {
             InitializeComponent();
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
