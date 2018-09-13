@@ -61,15 +61,19 @@
             <Grid Grid.Column="0"
                   Background="Tomato">
                 <!-- เปลี่ยนภาพพื้นหลังตรงนี้ -->
-
+                <Image Source="/Image/w.JPG"
+                       Stretch="UniformToFill"
+                       Opacity="60"/>
                 <TextBlock Text="MOTIVAR"
                            FontSize="38"
                            FontWeight="Bold"
+                           Foreground="Black"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"/>
+                
             </Grid>
             <Grid Grid.Column="1"
-                  Background="Gray">
+                  Background="#1b2b3e">
                 
                 <!--ใช้ StackPanel หลัก 1 อัน แล้วเรียงแนวตั้งลงมาเรื่อยๆ-->
                 <StackPanel Margin="0 -50 0 0"
@@ -80,8 +84,9 @@
                     <!-- ปุ่ม + Textbox ใส่ตรงนี้นะ -->
                     <TextBlock Text="LOGIN"
                                FontSize="28"
-                               FontWeight="Bold"
+                               FontWeight="Light"
                                Margin="0 0 0 40"
+                               Foreground="WhiteSmoke"
                                HorizontalAlignment="Center"/>
                     <StackPanel Margin="0 0 0 -10"
                                 Orientation="Horizontal"
@@ -89,7 +94,7 @@
                         <materialDesign:PackIcon 
                                 Kind="AccountOutline" 
                                 VerticalAlignment="center" 
-                                Foreground="#707070" 
+                                Foreground="White" 
                                 Height="40" 
                                 Width="25"
                                 Margin="0 0 0 0" />
@@ -100,6 +105,7 @@
                                      FontSize="18"
                                      Width="200"
                                      Height="25"
+                                     Background="Transparent"
                                      BorderThickness="0"/>
                         </Grid>
                         
@@ -114,7 +120,7 @@
                                  Height="40"
                                  Width="25"
                                  VerticalAlignment="Center" 
-                                 Foreground="#707070"/>
+                                 Foreground="White"/>
                         <Grid>
                             <Image Source="/Image/text_bg.png"
                                    Height="45"/>
@@ -122,6 +128,7 @@
                                          FontSize="18"
                                          Width="200" 
                                          Height="25"
+                                         Background="Transparent"
                                          BorderThickness="0"/>
                         </Grid>
                         
@@ -129,12 +136,15 @@
 
                     <Button HorizontalAlignment="Right" 
                             Content="Sign in" 
-                            Width="250" 
-                            Height="25"
-                            Margin="0 10 0 0"
-                            BorderBrush="#FF307CD6"/>
+                            Width="220" 
+                            Height="30"
+                            Margin="0 5 10 0"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="2"
+                            BorderBrush="White"/>
 
-                    <StackPanel Margin="0 5 0 0"
+                    <StackPanel Margin="0 10 0 0"
                                 Orientation="Horizontal"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right">
@@ -143,7 +153,9 @@
                                   Foreground="#707070"/>
                         <TextBlock Text="remember me"
                                    VerticalAlignment="Center"
-                                   Margin="0 0 0 0" 
+                                   Margin="2 0 10 0" 
+                                   Foreground="White"
+                                   FontWeight="Light"
                                    RenderTransformOrigin="0,0"/>
                     </StackPanel>
 
@@ -151,11 +163,15 @@
                             Margin="0 10 0 0"
                             HorizontalAlignment="Center">
                         <TextBlock Text="Password  " 
-                               FontWeight="Bold" 
+                               FontWeight="ExtraLight" 
+                               Foreground="White"
                                Margin="0 0 0 0"/>
-                        <TextBlock Text="l"/>
+                        <TextBlock Text="l"
+                                   FontWeight="Light" 
+                                   Foreground="White"/>
                         <TextBlock Text="   Forget Password" 
-                               FontWeight="Bold"/>
+                               FontWeight="ExtraLight" 
+                               Foreground="White"/>
                     </StackPanel>
 
                     
@@ -167,10 +183,16 @@
                             VerticalAlignment="Top"
                             HorizontalAlignment="Right">
 
-                    <ToggleButton Content="ไทย"
-                                  Width="50"/>
-                    <ToggleButton Content="English"
-                                  Width="50"/>
+                    <Button Content="ไทย"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderBrush="White"
+                            Width="50"/>
+                    <Button Content="English"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderBrush="White"
+                            Width="50"/>
 
                 </StackPanel>
 
