@@ -69,7 +69,7 @@
                            VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Column="1"
-                  Background="White">
+                  Background="Gray">
                 
                 <!--ใช้ StackPanel หลัก 1 อัน แล้วเรียงแนวตั้งลงมาเรื่อยๆ-->
                 <StackPanel Margin="0 -50 0 0"
@@ -93,13 +93,20 @@
                                 Height="40" 
                                 Width="25"
                                 Margin="0 0 0 0" />
-                        <TextBox materialDesign:HintAssist.Hint="Username" 
-                                 FontSize="18"
-                                 Width="250"
-                                 Height="25"/>  
+                        <Grid>
+                            <Image Source="/Image/text_bg.png"
+                                   Height="45"/>
+                            <TextBox materialDesign:HintAssist.Hint="Username" 
+                                     FontSize="18"
+                                     Width="200"
+                                     Height="25"
+                                     BorderThickness="0"/>
+                        </Grid>
+                        
+                        
                     </StackPanel>
 
-                    <StackPanel Margin="0 0 0 0"
+                    <StackPanel Margin="0 10 0 0"
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Center">
                         <materialDesign:PackIcon 
@@ -108,10 +115,16 @@
                                  Width="25"
                                  VerticalAlignment="Center" 
                                  Foreground="#707070"/>
-                        <PasswordBox materialDesign:HintAssist.Hint="Password hint" 
-                                     FontSize="18"
-                                     Width="250" 
-                                     Height="25"/>
+                        <Grid>
+                            <Image Source="/Image/text_bg.png"
+                                   Height="45"/>
+                            <PasswordBox materialDesign:HintAssist.Hint="Password hint" 
+                                         FontSize="18"
+                                         Width="200" 
+                                         Height="25"
+                                         BorderThickness="0"/>
+                        </Grid>
+                        
                     </StackPanel>
 
                     <Button HorizontalAlignment="Right" 
