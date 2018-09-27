@@ -25,9 +25,44 @@ namespace mtvpt_wpf.View.SubUserControl
             InitializeComponent();
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void HomeNotificationIcon_MouseEnter(object sender, MouseEventArgs e)
         {
+            HomeNotificationIcon.Foreground = new SolidColorBrush(Colors.Yellow); 
+        }
 
+        private void HomeNotificationIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            HomeNotificationIcon.Foreground = new SolidColorBrush(Colors.Gray);
+        }
+
+        private void HomeNotificationIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HomeNotificationIcon.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void HomeNotificationIcon_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            HomeNotificationIcon.Foreground = new SolidColorBrush(Colors.Yellow);
+        }
+
+        private void HomeSettingIcon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            HomeSettingIcon.Foreground = new SolidColorBrush(Colors.Yellow);
+        }
+
+        private void HomeSettingIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            HomeSettingIcon.Foreground = new SolidColorBrush(Colors.Gray);
+        }
+
+        private void HomeSettingIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HomeSettingIcon.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void HomeSettingIcon_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            HomeSettingIcon.Foreground = new SolidColorBrush(Colors.Yellow);
         }
     }
 }
