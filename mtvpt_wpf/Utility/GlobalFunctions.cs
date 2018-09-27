@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mtvpt_wpf.View;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,11 +7,13 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace mtvpt_wpf.Utility
 {
     public static class GlobalFunctions
     {
+        
         public static void ShowDebug(string msg)
         {
             Debug.WriteLine(msg);
@@ -40,6 +43,11 @@ namespace mtvpt_wpf.Utility
             {
                 return false;
             }
+        }
+
+        public static void getMainWindow(MainWindow MainWindow)
+        {
+            GlobalVariables._mainWindow = MainWindow;
         }
     }
 }

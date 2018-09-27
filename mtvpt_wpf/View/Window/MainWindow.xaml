@@ -17,7 +17,7 @@
         <Grid Name="MainMenuGrid"
               Background="LightGray"
               Grid.Column="0">
-            <ListView>
+            <ListView x:Name="MainListView">
                 <ListViewItem Name="ListViewItemLogin" 
                               Content="Login" 
                               Selected="ListViewItemLogin_Selected"/>
@@ -48,6 +48,8 @@
                 <ListViewItem Name="ListViewItemMaterialManagement" 
                               Content="MaterialManagement" 
                               Selected="ListViewItemMaterialManagement_Selected"/>
+                <ListViewItem Name="ListViewItemTest"
+                              Content="TEST" Selected="ListViewItemTest_Selected"/>
             </ListView>
             
         </Grid>

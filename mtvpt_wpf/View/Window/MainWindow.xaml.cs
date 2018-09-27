@@ -55,10 +55,11 @@ namespace mtvpt_wpf.View
             GlobalVariables.SYSTEM_LANGUEGE = "EN";
             GlobalFunctions.ShowDebug(Messages.Test);
 
+            ListViewItemTest.Selected += new RoutedEventHandler(ListViewItemSearch_Selected);
 
         }
 
-        private void SetUserControlMenu(UserControl _UserControlSelected)
+        public void SetUserControlMenu(UserControl _UserControlSelected)
         {
             ClearUserControlGrid();
             UserControlGrid.Children.Add(_UserControlSelected);
@@ -71,10 +72,11 @@ namespace mtvpt_wpf.View
 
         private void ListViewItemLogin_Selected(object sender, RoutedEventArgs e)
         {
+            GlobalFunctions.getMainWindow(this);
             SetUserControlMenu(_loginUserControl);
         }
 
-        private void ListViewItemHome_Selected(object sender, RoutedEventArgs e)
+        public void ListViewItemHome_Selected(object sender, RoutedEventArgs e)
         {
             SetUserControlMenu(_homeUserControl);
         }
@@ -117,6 +119,11 @@ namespace mtvpt_wpf.View
         private void ListViewItemMaterialManagement_Selected(object sender, RoutedEventArgs e)
         {
             SetUserControlMenu(_materialManagementUserControl); 
+        }
+
+        private void ListViewItemTest_Selected(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
