@@ -9,7 +9,9 @@
              mc:Ignorable="d" 
              Name="LoginUserControlXaml"
              d:DesignHeight="450" 
-             d:DesignWidth="800" Loaded="LoginUserControlXaml_Loaded">
+             d:DesignWidth="800" 
+             Background="#1b2b3e"
+             Loaded="LoginUserControlXaml_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -59,8 +61,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0"
-                  Background="Tomato">
+            <Grid Grid.Column="0">
                 <!-- เปลี่ยนภาพพื้นหลังตรงนี้ -->
                 <Image Source="/Image/w.JPG"
                        Stretch="UniformToFill"
@@ -74,7 +75,7 @@
                 
             </Grid>
             <Grid Grid.Column="1"
-                  Background="#1b2b3e">
+                  Background="Transparent">
                 
                 <!--ใช้ StackPanel หลัก 1 อัน แล้วเรียงแนวตั้งลงมาเรื่อยๆ-->
                 <StackPanel Margin="0 -50 0 0"
