@@ -1,0 +1,165 @@
+﻿<Window x:Class="mtvpt_wpf.View.Preload.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mtvpt_wpf.View.Preload"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="LoginWindow" 
+        Name="LoginWindowXaml"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode ="NoResize"
+        Background="#1b2b3e"
+        MinHeight="450" 
+        MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <!-- เปลี่ยนภาพพื้นหลังตรงนี้ -->
+            <Image Source="/Image/w.JPG"
+                       Stretch="UniformToFill"
+                       Opacity="60"/>
+            <TextBlock Text="MOTIVAR"
+                           FontSize="38"
+                           FontWeight="Bold"
+                           Foreground="Black"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+        </Grid>
+        <Grid Grid.Column="1"
+                  Background="Transparent">
+
+            <!--ใช้ StackPanel หลัก 1 อัน แล้วเรียงแนวตั้งลงมาเรื่อยๆ-->
+            <StackPanel Margin="0 -50 0 0"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                <!-- ปุ่ม + Textbox ใส่ตรงนี้นะ -->
+                <TextBlock x:Name="LoginHeaderText"
+                               Text="Login"
+                               FontSize="28"
+                               FontWeight="Light"
+                               Margin="0 0 0 40"
+                               Foreground="WhiteSmoke"
+                               HorizontalAlignment="Center"/>
+                <StackPanel Margin="0 0 0 -10"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                    <materialDesign:PackIcon 
+                                Kind="AccountOutline" 
+                                VerticalAlignment="center" 
+                                Foreground="White" 
+                                Height="40" 
+                                Width="25"
+                                Margin="0 0 0 0" />
+                    <Grid>
+                        <Image Source="/Image/text_bg.png"
+                                   Height="45"/>
+                        <TextBox Name="usernameTextblock"
+                                     materialDesign:HintAssist.Hint="Username" 
+                                     FontSize="18"
+                                     Width="200"
+                                     Height="25"
+                                     Background="Transparent"
+                                     BorderThickness="0" />
+                    </Grid>
+
+
+                </StackPanel>
+
+                <StackPanel Margin="0 10 0 0"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                    <materialDesign:PackIcon 
+                                 Kind="KeyVariant"
+                                 Height="40"
+                                 Width="25"
+                                 VerticalAlignment="Center" 
+                                 Foreground="White"/>
+                    <Grid>
+                        <Image Source="/Image/text_bg.png"
+                                   Height="45"/>
+                        <PasswordBox Name="passwordTextblock"
+                                         materialDesign:HintAssist.Hint="Password hint" 
+                                         FontSize="18"
+                                         Width="200" 
+                                         Height="25"
+                                         Background="Transparent"
+                                         BorderThickness="0" />
+                    </Grid>
+
+                </StackPanel>
+
+                <Button Name="signinButton"
+                            HorizontalAlignment="Right" 
+                            Content="Sign in" 
+                            Width="220" 
+                            Height="30"
+                            Margin="0 5 10 0"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="2"
+                            BorderBrush="White"/>
+
+                <StackPanel Margin="0 10 0 0"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right">
+                    <CheckBox Margin="0 0 0 0"
+                                  VerticalAlignment="Center" 
+                                  Foreground="#707070"/>
+                    <TextBlock Text="remember me"
+                                   VerticalAlignment="Center"
+                                   Margin="2 0 10 0" 
+                                   Foreground="White"
+                                   FontWeight="Light"
+                                   RenderTransformOrigin="0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 10 0 0"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Password  " 
+                               FontWeight="ExtraLight" 
+                               Foreground="White"
+                               Margin="0 0 0 0"/>
+                    <TextBlock Text="l"
+                                   FontWeight="Light" 
+                                   Foreground="White"/>
+                    <TextBlock Text="   Forget Password" 
+                               FontWeight="ExtraLight" 
+                               Foreground="White"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+            <!-- ปุ่มเลือกภาษา -->
+            <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right">
+
+                <Button Content="ไทย"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderBrush="White"
+                            Width="50"/>
+                <Button Content="English"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderBrush="White"
+                            Width="50"/>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>
