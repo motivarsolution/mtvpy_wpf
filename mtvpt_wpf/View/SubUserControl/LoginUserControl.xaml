@@ -150,7 +150,8 @@
                             Background="Transparent"
                             Foreground="White"
                             BorderThickness="2"
-                            BorderBrush="White" Click="signinButton_Click"/>
+                            BorderBrush="White" 
+                            Click="signinButton_Click"/>
 
                     <StackPanel Margin="0 10 0 0"
                                 Orientation="Horizontal"

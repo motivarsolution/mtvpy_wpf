@@ -70,7 +70,7 @@ namespace mtvpt_wpf.View.SubUserControl
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            HomeUserControl _homeUserControl = new HomeUserControl();
+            //HomeUserControl _homeUserControl = new HomeUserControl();
 
             DatabaseConnection.SetConnection();
             DatabaseConnection.querySystemDetail();

@@ -9,6 +9,7 @@
         Height="720" 
         Width="1280"
         MinWidth="1000"
+        WindowStartupLocation="CenterScreen"
         Background="#1b2b3e">
         <!--383838-->
     <Grid Name="MainGrid">
