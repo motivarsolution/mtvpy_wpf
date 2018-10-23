@@ -36,9 +36,6 @@ namespace mtvpt_wpf.View
         UserManagementUserControl _userManagementUserControl = new UserManagementUserControl();
         MaterialManagementUserControl _materialManagementUserControl = new MaterialManagementUserControl();
 
-        LoginMessage loginMessage = new LoginMessage();
-        LoginModel loginModel = new LoginModel();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -46,17 +43,13 @@ namespace mtvpt_wpf.View
             DatabaseConnection.SetConnection();
             DatabaseConnection.querySystemDetail();
 
-            loginModel.login_username = "test01";
-            loginModel.Login_password = "test01";
+            //ListViewItemTest.Selected += new RoutedEventHandler(ListViewItemSearch_Selected);
+            //ListViewItemHome.Selected += new RoutedEventHandler(MainWindowXaml_Loaded);
+        }
 
-            loginMessage = LoginController.Login(loginModel);
-            GlobalFunctions.ShowDebug(loginMessage.returnStatusModel.error_message);
-
-            GlobalVariables.SYSTEM_LANGUEGE = "EN";
-            GlobalFunctions.ShowDebug(Messages.Test);
-
-            ListViewItemTest.Selected += new RoutedEventHandler(ListViewItemSearch_Selected);
-
+        private void MainWindowXaml_Loaded(object sender, RoutedEventArgs e)
+        {
+            ListViewItemHome.IsSelected = true;
         }
 
         public void SetUserControlMenu(UserControl _UserControlSelected)
@@ -125,5 +118,7 @@ namespace mtvpt_wpf.View
         {
 
         }
+
+
     }
 }

@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:mtvpt_wpf.View"
         mc:Ignorable="d"
         Title="MainWindow" 
+        x:Name="MainWindowXaml"
         Height="720" 
         Width="1280"
         MinWidth="1000"
         WindowStartupLocation="CenterScreen"
-        Background="#1b2b3e">
+        Background="#1b2b3e" Loaded="MainWindowXaml_Loaded">
         <!--383838-->
     <Grid Name="MainGrid">
         <Grid.ColumnDefinitions>
@@ -25,8 +26,9 @@
                               Content="Login" 
                               Selected="ListViewItemLogin_Selected"/>
                 <ListViewItem Name="ListViewItemHome" 
+                              
                               Content="Home" 
-                              Selected="ListViewItemHome_Selected"/>
+                              Selected="ListViewItemHome_Selected" />
                 <ListViewItem Name="ListViewItemCustomer" 
                               Content="Customer" 
                               Selected="ListViewItemCustomer_Selected"/>
