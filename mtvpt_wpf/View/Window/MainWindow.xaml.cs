@@ -40,8 +40,8 @@ namespace mtvpt_wpf.View
         {
             InitializeComponent();
 
-            DatabaseConnection.SetConnection();
-            DatabaseConnection.querySystemDetail();
+            //DatabaseConnection.SetConnection();
+            //DatabaseConnection.querySystemDetail();
 
             //ListViewItemTest.Selected += new RoutedEventHandler(ListViewItemSearch_Selected);
             //ListViewItemHome.Selected += new RoutedEventHandler(MainWindowXaml_Loaded);

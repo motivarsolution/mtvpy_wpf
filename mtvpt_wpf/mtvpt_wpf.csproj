@@ -107,6 +107,10 @@
     <Compile Include="Constants\Contents.cs" />
     <Compile Include="Constants\Messages.cs" />
     <Compile Include="Controller\DatabaseConnection.cs" />
+    <Compile Include="Controller\DBHelper\SQLiteColumn.cs" />
+    <Compile Include="Controller\DBHelper\SQLiteColumnList.cs" />
+    <Compile Include="Controller\DBHelper\SQLiteHelper.cs" />
+    <Compile Include="Controller\DBHelper\SQLiteTable.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Model\Internal\LoginMessage.cs" />
     <Compile Include="Model\Internal\LoginModel.cs" />

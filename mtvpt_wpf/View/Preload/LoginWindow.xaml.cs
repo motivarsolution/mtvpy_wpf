@@ -30,6 +30,9 @@ namespace mtvpt_wpf.View.Preload
 
         public LoginWindow()
         {
+            DatabaseConnection.SetConnection();
+            DatabaseConnection.querySystemDetail();
+
             InitializeComponent();
         }
 

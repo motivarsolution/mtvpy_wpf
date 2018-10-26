@@ -4,6 +4,7 @@ using mtvpt_wpf.Model.Internal;
 using mtvpt_wpf.Utility;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -19,12 +20,12 @@ namespace mtvpt_wpf.Controller
         //private static List<zSystem_Detail_Model> _zdmList = new List<zSystem_Detail_Model>();
         //private static zSystem_Detail_Model _zdm = new zSystem_Detail_Model();
 
+        static string DatabasePath = @"Database\SystemDB.db";
+        static string ProjectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+        static string FullDatabasePath = Path.Combine(ProjectPath, DatabasePath);
+
         public static void SetConnection()
         {
-            string DatabasePath = @"Database\SystemDB.db";
-            string ProjectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string FullDatabasePath = Path.Combine(ProjectPath, DatabasePath);
-
             if (!File.Exists(FullDatabasePath))
             {
                 GlobalFunctions.ShowDebug("Create Database");
@@ -41,31 +42,66 @@ namespace mtvpt_wpf.Controller
         #region QuerySystem
         public static void querySystemDetail()
         {
-            string CommandText = "SELECT * " +
-                                 "FROM zSystem_Detail ";
-
-            sqlConnection.Open();
-            sqlCommand = sqlConnection.CreateCommand();
-
-            using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
+            using (SQLiteCommand sqlCommand = new SQLiteCommand())
             {
-                using (SQLiteDataReader rdr = cmd.ExecuteReader())
-                {
-                    while (rdr.Read())
-                    {
-                        zSystemDetailModel.SYSTEM_ID = (rdr["SYSTEM_ID"].ToString());
-                        zSystemDetailModel.SYSTEM_NAME = (rdr["SYSTEM_NAME"].ToString());
-                        zSystemDetailModel.SYSTEM_FULLNAME = (rdr["SYSTEM_FULLNAME"].ToString());
-                        zSystemDetailModel.SYSTEM_VERSION = (rdr["SYSTEM_VERSION"].ToString());
-                        zSystemDetailModel.SYSTEM_VERSION_NAME = (rdr["SYSTEM_VERSION_NAME"].ToString());
-                        zSystemDetailModel.SYSTEM_TIMEZONE = (rdr["SYSTEM_TIMEZONE"].ToString());
-                        zSystemDetailModel.SYSTEM_LAST_SYNC_TIME = (rdr["SYSTEM_LAST_SYNC_TIME"].ToString());
-                        zSystemDetailModel.SYSTEM_LAST_SYNC_DATE = (rdr["SYSTEM_LAST_SYNC_DATE"].ToString());
-                    }
-                }
+                string CommandText = "SELECT * " +
+                                     "FROM zSystem_Detail ";
+                sqlCommand.Connection = sqlConnection;
+                sqlConnection.Open();
+
+                SQLiteHelper sqlhelper = new SQLiteHelper(sqlCommand);
+                DataTable dt = sqlhelper.Select(CommandText);
+
+                zSystemDetailModel.SYSTEM_ID = dt.Rows[0]["SYSTEM_ID"].ToString();
+                zSystemDetailModel.SYSTEM_NAME = dt.Rows[0]["SYSTEM_NAME"].ToString();
+                zSystemDetailModel.SYSTEM_FULLNAME = dt.Rows[0]["SYSTEM_FULLNAME"].ToString();
+                zSystemDetailModel.SYSTEM_VERSION = dt.Rows[0]["SYSTEM_VERSION"].ToString();
+                zSystemDetailModel.SYSTEM_VERSION_NAME = dt.Rows[0]["SYSTEM_VERSION_NAME"].ToString();
+                zSystemDetailModel.SYSTEM_TIMEZONE = dt.Rows[0]["SYSTEM_TIMEZONE"].ToString();
+                zSystemDetailModel.SYSTEM_LAST_SYNC_TIME = dt.Rows[0]["SYSTEM_LAST_SYNC_TIME"].ToString();
+                zSystemDetailModel.SYSTEM_LAST_SYNC_DATE = dt.Rows[0]["SYSTEM_LAST_SYNC_DATE"].ToString();
+
+                sqlConnection.Close();
+                /*
+                var myEnumerable = dt.AsEnumerable();
+
+                    List<AccountModel> myClassList =
+                        (from item in myEnumerable
+                         select new AccountModel
+                         {
+                             account_id = item.Field<string>("account_id"),
+                             account_name = item.Field<string>("account_name"),
+                             account_roles = item.Field<string>("account_roles")
+                         }).ToList(); 
+                */
             }
 
-            sqlConnection.Close();
+
+            //string CommandText = "SELECT * " +
+            //                     "FROM zSystem_Detail ";
+
+            //sqlConnection.Open();
+            //sqlCommand = sqlConnection.CreateCommand();
+
+            //using (SQLiteCommand cmd = new SQLiteCommand(CommandText, DatabaseConnection.sqlConnection))
+            //{
+            //    using (SQLiteDataReader rdr = cmd.ExecuteReader())
+            //    {
+            //        while (rdr.Read())
+            //        {
+            //            zSystemDetailModel.SYSTEM_ID = (rdr["SYSTEM_ID"].ToString());
+            //            zSystemDetailModel.SYSTEM_NAME = (rdr["SYSTEM_NAME"].ToString());
+            //            zSystemDetailModel.SYSTEM_FULLNAME = (rdr["SYSTEM_FULLNAME"].ToString());
+            //            zSystemDetailModel.SYSTEM_VERSION = (rdr["SYSTEM_VERSION"].ToString());
+            //            zSystemDetailModel.SYSTEM_VERSION_NAME = (rdr["SYSTEM_VERSION_NAME"].ToString());
+            //            zSystemDetailModel.SYSTEM_TIMEZONE = (rdr["SYSTEM_TIMEZONE"].ToString());
+            //            zSystemDetailModel.SYSTEM_LAST_SYNC_TIME = (rdr["SYSTEM_LAST_SYNC_TIME"].ToString());
+            //            zSystemDetailModel.SYSTEM_LAST_SYNC_DATE = (rdr["SYSTEM_LAST_SYNC_DATE"].ToString());
+            //        }
+            //    }
+            //}
+
+            //sqlConnection.Close();
         }
 
         public static void queryzNumberRange()
