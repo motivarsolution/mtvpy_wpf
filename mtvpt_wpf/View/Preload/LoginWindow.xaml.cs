@@ -39,6 +39,8 @@ namespace mtvpt_wpf.View.Preload
         private void LoginWindowXaml_Loaded(object sender, RoutedEventArgs e)
         {
             usernameTextblock.Focus();
+            GlobalFunctions.ShowDebug("AcH : " + LoginWindowXaml.Height);
+            GlobalFunctions.ShowDebug("AcW : " + LoginWindowXaml.Width);
         }
 
         private void usernameTextblock_KeyUp(object sender, KeyEventArgs e)

@@ -39,6 +39,36 @@ namespace mtvpt_wpf.Controller
 
         }
 
+        public static bool DatabaseConnectionCheck()
+        {
+            try
+            {
+                if (!File.Exists(FullDatabasePath))
+                {
+                    GlobalFunctions.ShowDebug("Create Database");
+                    //Create Database
+                    sqlConnection = new SQLiteConnection("Data Source=" + FullDatabasePath + ";Version=3;");
+                    sqlConnection.Open();
+                    sqlConnection.Close();
+                    return true;
+                }
+                else
+                {
+                    sqlConnection = new SQLiteConnection("Data Source=" + FullDatabasePath + ";Version=3;");
+                    sqlConnection.Open();
+                    sqlConnection.Close();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
+
+        }
+
         #region QuerySystem
         public static void querySystemDetail()
         {

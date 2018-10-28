@@ -1,0 +1,29 @@
+﻿<Window x:Class="mtvpt_wpf.View.Preload.SplashScreenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mtvpt_wpf.View.Preload"
+        mc:Ignorable="d"
+        Title="SplashScreenWindow"
+        Name="SplashScreenWindowXaml"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode ="NoResize"
+        Background="#1b2b3e"
+        Height="450" 
+        Width="800" 
+        Loaded="SplashScreenWindowXaml_Loaded">
+    <Grid>
+        <Image Source="/Image/splash_screen.jpg"/>
+        <ProgressBar Minimum="0" 
+                     Maximum="100" 
+                     Value="75"
+                     Width="800"
+                     Height="2"
+                     VerticalAlignment="Bottom"
+                     HorizontalAlignment="Center">
+        </ProgressBar>
+
+    </Grid>
+</Window>
