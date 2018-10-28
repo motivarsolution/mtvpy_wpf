@@ -24,6 +24,7 @@
             <ListView x:Name="MainListView">
                 <ListViewItem Name="ListViewItemLogin" 
                               Content="Login" 
+                              Visibility="Collapsed"
                               Selected="ListViewItemLogin_Selected"/>
                 <ListViewItem Name="ListViewItemHome" 
                               
@@ -53,8 +54,6 @@
                 <ListViewItem Name="ListViewItemMaterialManagement" 
                               Content="MaterialManagement" 
                               Selected="ListViewItemMaterialManagement_Selected"/>
-                <ListViewItem Name="ListViewItemTest"
-                              Content="TEST" Selected="ListViewItemTest_Selected"/>
             </ListView>
             
         </Grid>

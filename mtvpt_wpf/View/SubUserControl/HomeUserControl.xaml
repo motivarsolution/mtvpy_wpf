@@ -126,7 +126,8 @@
         </Grid>
         <Grid Grid.Row="2"><!-- Chart -->
             <StackPanel Orientation="Horizontal"
-                        Visibility="Hidden">
+                        HorizontalAlignment="Stretch"
+                        Visibility="Visible">
                 <Grid>
                     <lvc:PieChart LegendLocation="Bottom" 
                                   Hoverable="False" 

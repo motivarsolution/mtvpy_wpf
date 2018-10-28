@@ -114,11 +114,5 @@ namespace mtvpt_wpf.View
             SetUserControlMenu(_materialManagementUserControl); 
         }
 
-        private void ListViewItemTest_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
     }
 }

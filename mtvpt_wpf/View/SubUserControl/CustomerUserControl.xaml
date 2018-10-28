@@ -5,11 +5,93 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mtvpt_wpf.View.SubUserControl"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" 
+             d:DesignWidth="800"
+             Background="#1b2b3e">
     <Grid>
-        <TextBlock Text="Customer"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="60"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <!--Overview Status-->
+            <Border BorderBrush="White"
+                    BorderThickness="1">
+
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1">
+            <!--Main-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+                  Margin="0 5 0 5">
+                <!--Add Button-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock Text="Customer Management"
+                               FontSize="24"
+                               Foreground="WhiteSmoke"
+                               FontWeight="Light"
+                               Margin="10 0 0 0"
+                               VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                        <Button Content="New Customer"
+                                Width="140"
+                                Height="25"
+                                Margin="10 0 10 0"/>
+                        <Button Content="Edit"
+                                Width="60"
+                                Height="25"
+                                Margin="10 0 10 0"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1"
+                  Margin="0 5 0 5">
+                <!--Search-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBox Width="300"
+                             Height="25"
+                             Margin="10 0 0 0"
+                             HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                        <ComboBox Width="100"
+                                  Height="25"
+                                  Margin="10 0 10 0">
+
+                        </ComboBox>
+                        <ComboBox Width="100"
+                                  Height="25"
+                                  Margin="10 0 10 0">
+
+                        </ComboBox>
+
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <!--Material Table-->
+                <DataGrid Margin="10">
+
+                </DataGrid>
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>
