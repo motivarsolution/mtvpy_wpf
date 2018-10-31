@@ -1,4 +1,6 @@
-﻿using System;
+﻿using mtvpt_wpf.Utility;
+using mtvpt_wpf.View.Popup;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,24 @@ namespace mtvpt_wpf.View.SubUserControl
         {
             InitializeComponent();
         }
+
+        private void NewMaterialButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewMaterialPopup newMaterialPopup = new NewMaterialPopup();
+            GlobalVariables._mainWindow.SetUserControlMenu(newMaterialPopup);
+        }
+
+        /*
+         public void SetUserControlMenu(UserControl _UserControlSelected)
+        {
+            ClearUserControlGrid();
+            UserControlGrid.Children.Add(_UserControlSelected);
+        }
+
+        public void ClearUserControlGrid()
+        {
+            UserControlGrid.Children.Clear();
+        }
+         */
     }
 }

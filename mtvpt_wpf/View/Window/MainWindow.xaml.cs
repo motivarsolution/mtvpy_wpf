@@ -45,6 +45,8 @@ namespace mtvpt_wpf.View
 
             //ListViewItemTest.Selected += new RoutedEventHandler(ListViewItemSearch_Selected);
             //ListViewItemHome.Selected += new RoutedEventHandler(MainWindowXaml_Loaded);
+
+            GlobalVariables._mainWindow = this;
         }
 
         private void MainWindowXaml_Loaded(object sender, RoutedEventArgs e)
@@ -58,7 +60,7 @@ namespace mtvpt_wpf.View
             UserControlGrid.Children.Add(_UserControlSelected);
         }
 
-        private void ClearUserControlGrid()
+        public void ClearUserControlGrid()
         {
             UserControlGrid.Children.Clear();
         }

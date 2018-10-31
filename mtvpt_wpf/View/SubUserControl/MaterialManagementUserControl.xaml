@@ -16,7 +16,6 @@
         <Grid Grid.Column="0"><!--Overview Status-->
             <Border BorderBrush="White"
                     BorderThickness="1">
-                
             </Border>
         </Grid>
         <Grid Grid.Column="1"><!--Main-->
@@ -42,10 +41,11 @@
                 <Grid Grid.Column="1">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Right">
-                        <Button Content="New Material"
+                        <Button Name="NewMaterialButton"
+                                Content="New Material"
                                 Width="140"
                                 Height="25"
-                                Margin="10 0 10 0"/>
+                                Margin="10 0 10 0" Click="NewMaterialButton_Click"/>
                         <Button Content="Export"
                                 Width="60"
                                 Height="25"

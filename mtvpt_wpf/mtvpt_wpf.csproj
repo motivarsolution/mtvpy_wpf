@@ -126,6 +126,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Utility\Timer.cs" />
+    <Compile Include="View\Popup\NewMaterialPopup.xaml.cs">
+      <DependentUpon>NewMaterialPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Preload\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -197,6 +200,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\Popup\NewMaterialPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Preload\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
